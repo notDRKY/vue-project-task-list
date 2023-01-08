@@ -1,15 +1,26 @@
+<!--Hay que importar los componentes-->
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <todo-list tittle-name="Cosas que hacer este año">
+  </todo-list>
+  <todo-item></todo-item>
+  <add-item></add-item>
+  <del-all></del-all>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TodoList from './components/TodoList.vue'
+import TodoItem from './components/TodoItem.vue'
+import AddItem from './components/AddItem.vue'
+import DelAll from './components/DelAll.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TodoList,
+    TodoItem,
+    AddItem,
+    DelAll
   }
 }
 </script>
