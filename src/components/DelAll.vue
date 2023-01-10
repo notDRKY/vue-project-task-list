@@ -6,7 +6,7 @@
   export default {
     methods: {
       delList() {
-        alert('Se desea eliminar este elemento de la lista')
+        alert('Se desea eliminar esta lista')
       }
     },
     name: 'DelAll',

@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  import TodoItem from './components/TodoItem.vue'
+  import TodoItem from './TodoItem.vue'
   export default {  
     data() {
       return {
@@ -22,6 +22,9 @@
     name: 'TodoList',
     props: {
       tittleName: String
+    },
+    components: {
+      TodoItem
     }
   }
 </script>

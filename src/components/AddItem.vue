@@ -13,7 +13,7 @@ export default {
   },
   methods: {
     insertarElemento() {
-      alert('Se desea insertar el elemento')
+      alert('Se desea insertar un elemento en la lista')
     }
   }
 }
