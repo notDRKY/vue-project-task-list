@@ -8,7 +8,8 @@
 </template>
 
 <script>
-  export default {
+  import TodoItem from './components/TodoItem.vue'
+  export default {  
     data() {
       return {
         taskList: [
