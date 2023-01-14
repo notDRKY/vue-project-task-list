@@ -1,35 +1,39 @@
 <template>
-  <div>
-    <li @dblclick="delTask">
-      <!--
-        La directiva v-model es un atajo que combina la directiva v-bind 
-        para enlazar el valor del elemento con una propiedad, y la directiva 
-        v-on para escuchar los eventos de cambio del elemento y actualizar 
-        la propiedad.
-      -->
-      <input v-model="taskInfo.completed" type="checkbox">
-      <del v-if="taskInfo.completed">{{ taskInfo.task }}</del>
-      <span v-else>{{ taskInfo.task }}</span>
-    </li>
-  </div>
+  <li @dblclick="delTodo">
+    <input type="checkbox" v-model="done" @change="toogleDone" />
+    <label>
+      <del v-if="todo.done">
+        {{ todo.title }}
+      </del>
+      <span v-else>
+        {{ todo.title }}
+      </span>
+    </label>
+  </li>
 </template>
 
 <script>
-  export default {
-    methods: {
-      delTask() {
-        alert('Se desea eliminar este elemento de la lista')
-      }
+export default {
+  name: "todo-item",
+  props: {
+    todo: {
+      type: Object,
+      required: true,
     },
-    name: 'TodoItem',
-    props: {
-      taskInfo: String
-    }
-  }
+  },
+  data() {
+    return {
+      done: this.todo.done,
+    };
+  },
+  methods: {
+    delTodo() {
+      alert("Se quiere borrar " + this.todo.title);
+    },
+    toogleDone() {
+      alert("Se quiere cambiar el estado de " + this.todo.title);
+      this.done = this.todo.done;
+    },
+  },
+};
 </script>
-
-<style>
-ul li {
-  list-style: none;
-}
-</style>

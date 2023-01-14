@@ -1,25 +1,23 @@
-<!--Hay que importar los componentes-->
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <todo-list tittle-name="Cosas que hacer este año">
-  </todo-list>
-  <add-item></add-item>
-  <del-all></del-all>
+  <TodoList />
+  <todo-add />
+  <br />
+  <todo-del-all />
 </template>
 
 <script>
-import TodoList from './components/TodoList.vue'
-import AddItem from './components/AddItem.vue'
-import DelAll from './components/DelAll.vue'
+import TodoList from "./components/TodoList.vue";
+import TodoAdd from "./components/TodoAdd.vue";
+import TodoDelAll from "./components/TodoDelAll.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     TodoList,
-    AddItem,
-    DelAll
-  }
-}
+    TodoAdd,
+    TodoDelAll,
+  },
+};
 </script>
 
 <style>
@@ -27,7 +25,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
