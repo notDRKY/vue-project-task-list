@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import { store } from '../store';
+
 export default {
   name: "todo-item",
   props: {
@@ -24,16 +26,15 @@ export default {
   data() {
     return {
       done: this.todo.done,
-    };
+    }
   },
   methods: {
     delTodo() {
-      alert("Se quiere borrar " + this.todo.title);
+      store.delTodoAction(this.todo.id)
     },
     toogleDone() {
-      alert("Se quiere cambiar el estado de " + this.todo.title);
-      this.done = this.todo.done;
+      store.toggleDoneAction(this.todo.id)
     },
-  },
-};
+  }
+}
 </script>

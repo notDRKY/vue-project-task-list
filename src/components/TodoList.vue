@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import { store } from "../store";
 import TodoItem from "./TodoItem.vue";
 
 export default {
@@ -19,28 +20,7 @@ export default {
   props: ["title"],
   data() {
     return {
-      todos: [
-        {
-          id: 1,
-          title: "Learn JavaScript",
-          done: false,
-        },
-        {
-          id: 2,
-          title: "Learn Vue",
-          done: false,
-        },
-        {
-          id: 3,
-          title: "Play around in JSFiddle",
-          done: true,
-        },
-        {
-          id: 4,
-          title: "Build something awesome",
-          done: true,
-        },
-      ],
+      todos: store.state.todos
     };
   },
 };

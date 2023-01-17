@@ -8,6 +8,8 @@
 </template>
 
 <script>
+import { store } from '../store';
+
 export default {
   name: "todo-add",
   data() {
@@ -17,11 +19,8 @@ export default {
   },
   methods: {
     addTodo() {
-      if (this.newTodo) {
-        alert("Quiero añadir " + this.newTodo);
-        this.newTodo = "";
-      }
+      store.addTodoAction(this.newTodo)
     },
   },
-};
+}
 </script>
