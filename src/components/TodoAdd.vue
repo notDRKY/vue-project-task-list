@@ -19,7 +19,10 @@ export default {
   },
   methods: {
     addTodo() {
-      store.addTodoAction(this.newTodo)
+      if (this.newTodo) {
+        store.addTodoAction(this.newTodo)
+        this.newTodo = ''
+      }
     },
   },
 }

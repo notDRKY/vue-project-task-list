@@ -30,10 +30,16 @@ export default {
   },
   methods: {
     delTodo() {
-      store.delTodoAction(this.todo.id)
+      if (confirm(`Vas a borrar la tarea: '${this.todo.title}'`)) {
+        store.delTodoAction(this.todo.id)
+      }
     },
     toogleDone() {
-      store.toggleDoneAction(this.todo.id)
+      if (confirm(`Vas a cambiar el estado de la tarea: '${this.todo.title}'`)) {
+        store.toggleDoneAction(this.todo.id)
+      } else {
+        this.done = this.todo.done
+      }
     },
   }
 }

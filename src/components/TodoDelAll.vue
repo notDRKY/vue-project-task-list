@@ -9,9 +9,11 @@ export default {
   name: "todo-del-all",
   methods: {
     delTodos() {
+      if (confirm('¿Deseas borrar toda la lista de tareas?')) {
         store.clearTodosAction()
       }
     }
   }
+}
 
 </script>
