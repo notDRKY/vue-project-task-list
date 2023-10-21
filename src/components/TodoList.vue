@@ -4,7 +4,7 @@
     <ul v-if="todos.length">
       <todo-item v-for="item in todos" :key="item.id" :todo="item" />
     </ul>
-    <p v-else>No hay tareas que mostrar</p>
+    <p v-else>No tasks to show</p>
   </div>
 </template>
 

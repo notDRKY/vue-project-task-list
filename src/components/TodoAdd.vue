@@ -2,7 +2,7 @@
   <div>
     <form @submit.prevent="addTodo">
       <input placeholder="Task to add..." v-model="newTodo" />
-      <button type="submit">Añadir</button>
+      <button type="submit">Add</button>
     </form>
   </div>
 </template>

@@ -30,12 +30,12 @@ export default {
   },
   methods: {
     delTodo() {
-      if (confirm(`Vas a borrar la tarea: '${this.todo.title}'`)) {
+      if (confirm(`You are going to delete the task: '${this.todo.title}'`)) {
         store.delTodoAction(this.todo.id)
       }
     },
     toogleDone() {
-      if (confirm(`Vas a cambiar el estado de la tarea: '${this.todo.title}'`)) {
+      if (confirm(`You are going to change the status of the task: '${this.todo.title}'`)) {
         store.toggleDoneAction(this.todo.id)
       } else {
         this.done = this.todo.done

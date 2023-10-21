@@ -1,5 +1,5 @@
 <template>
-  <button @click="delTodos">Borrar toda la lista</button>
+  <button @click="delTodos">Clear all task list</button>
 </template>
 
 <script>
@@ -9,7 +9,7 @@ export default {
   name: "todo-del-all",
   methods: {
     delTodos() {
-      if (confirm('¿Deseas borrar toda la lista de tareas?')) {
+      if (confirm('Do you want to delete the entire to-do list?')) {
         store.clearTodosAction()
       }
     }
