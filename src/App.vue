@@ -2,7 +2,6 @@
   <h1>Task list</h1>
   <TodoList />
   <todo-add />
-  <br />
   <todo-del-all />
 </template>
 
@@ -73,7 +72,7 @@ body {
 }
 
 #app button {
-  margin-top: -0.5rem;
+  margin-top: 0.5rem;
   color: #f2f2f2;
   font-size: 18px;
   width: 100%;
