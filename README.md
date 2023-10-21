@@ -1,19 +1,9 @@
-# vue-project-ud10
+# Project: vue-project-task-list
 
-## Project setup
-```
-npm install
-```
+___
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+👋🏻 Hi! This was my first project developed in Vue3, it was a challenge to adapt to the reactive inputs, but I was able to develop a knowledge base to work on.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+👨🏻‍🎓 I must not forget that this project was entirely developed at the end of the year 2022 in my second year of the higher degree course in web application development. 
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+You can see the demo of the project in this link: https://task-list-ten-snowy.vercel.app/
